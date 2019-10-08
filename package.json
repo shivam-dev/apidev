@@ -9,9 +9,13 @@
     "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
+    "moment": "^2.24.0",
     "netlify-lambda": "^1.4.3",
-    "serverless-http": "^1.9.1"
+    "serverless-http": "^1.9.1",
+    "socket.io": "^2.3.0",
+    "uws": "^10.148.1"
   },
   "author": "",
   "license": "ISC"

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>WebxTutor Global Chat App</title>
+    <link href="/img/logo.png" rel="icon" type="image/png"/>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <!--[if lt IE 9]> <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script> <![endif]-->
+    <style>
+      .well {
+        margin-top: 35px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="vertical-center" id="chatUserInfo">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4 well">
+                <h1 class="text-center">
+                  Join WebxTutor Global Chat !</h1>
+                <form action="/global-chat.html" class="" onsubmit="updateUserDetails()">
+    
+                  <div class="form-group">
+                    <label for="name">
+                      Display Name :</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-user"></i>
+                      </span>
+                      <input class="form-control" id="name" name="name" placeholder="" type="text">
+                    </div>
+                  </div>
+     
+                  <div class="form-group">
+                    <input class="btn btn-primary btn-block" type="submit" value="Join Chat"/>
+                  </div>
+    
+                </form>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="container-fluid" id="chatBox" style="display: none;">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 well">
+          <!-- <a href="/index.html">Change Settings</a> -->
+          <a class="btn btn-info " href="/index.html">
+            <i class="fa fa-cog"></i>
+            Home</a>
+          <h1 class="room-title text-center"></h1>
+          <p><strong>Online Users (<span class="onlineUsersCount"></span>): </strong><span class="onlineUsers"></span></p>
+
+          <ul class="messages list-group">
+            <!-- messages would be shown here -->
+          </ul>
+
+          <form id="messageForm">
+            <div class="form-group">
+              <i class="" id="icon-type"></i>
+              <p class="help-block typing"></p>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-comment"></i>
+                </span>
+                <input autofocus class="form-control" id="messagebox" name="message" type="text" value=""/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input class="btn btn-default btn-block" type="submit"/>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+    <script src="/js/app.min2.js?v1=12"></script>
+    <script>
+        
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+        ga('create', 'UA-92197588-1', 'auto');
+        ga('send', 'pageview');
+  
+    </script> 
+  </body>
+</html>
